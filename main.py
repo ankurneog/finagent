@@ -8,6 +8,8 @@ from pipelines import AgentWorkflow
 from data import StockDataClient
 from data.fin_data_defs import FinancialRatios
 from tools import get_ticker
+from art import text2art
+
 
 """This script performs a financial analysis workflow using LLaMA-3 (llama3:8b) agents.
     It fetches stock data for a given ticker symbol, performs various analyses, and generates plots.
@@ -74,6 +76,9 @@ def parse_arguments() -> str:
     return args
 
 if __name__ == "__main__":
+    logo = text2art("FINAGENT by Ankur", font="small")
+    print("\n" + logo + "\n") 
+    print(f'Your AI powered stock analysis tool')
     args = parse_arguments()
     print(f"Input : {args.symbol}")
     asyncio.run(main(args))
