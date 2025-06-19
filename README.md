@@ -61,3 +61,5 @@ I need to thank github co-pilot for massively improving my speed.
  - Integration of technical analysis 
  - Provide buy/hold/sell recommendation
  - Feedback from friends/colleagues.
+ - Migrate to bigger models for better output 
+ - run on intel gaudi 3 accelerators
